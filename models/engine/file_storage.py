@@ -73,10 +73,10 @@ class FileStorage:
         """ retrieves a object """
         if cls and id:
             obj = "{}.{}".format(cls, id)
-            all_obj = self.all(cls)
+            all_obj = self.all(cls.__name__)
             return all_obj.get(obj)
         return None
 
     def count(self, cls=None):
         """ return a count of objects """
-        return (len(self.all(cls)))
+        return len(self.all(cls).items())
