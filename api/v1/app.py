@@ -1,5 +1,5 @@
 #!/usr/bin/python3
-#create a application with flask
+""" create a application with flask """
 
 import os
 from flask import Flask, Blueprint, jsonify
